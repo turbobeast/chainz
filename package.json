@@ -1,0 +1,15 @@
+{
+  "name": "chainz",
+  "version": "1.0.0",
+  "description": "Helps call an array of async functions in order, by injecting a next callback ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "events"
+  ],
+  "author": "George Michael Faust <georgemichaelfaust@gmail.com> (http://georgemichaelfaust.com/)",
+  "license": "MIT"
+}
