@@ -12,7 +12,8 @@ Helps call an array of async functions in order, by injecting a next callback.
   };
 
   var asyncFunctionTwo (next) {
-    next(); //calls async function three
+    //do something asnyc
+    next(); //calls asyncFunctionThree
   };
 
   var asyncFunctionThree () {
