@@ -1,25 +1,28 @@
 ## Chainz
 
-Helps call an array of async functions in order, by injecting a next callback.
+[![Build Status](https://travis-ci.org/turbobeast/chainz.svg)](https://travis-ci.org/turbobeast/chainz)
 
+Helps call an array of async functions in order, by injecting a next callback.
 
 ```javascript
   var chain = require('chainz');
 
-  function asyncFunctionOne (next) {
-    //do something asnyc
-    next(); // calls asyncFunctionTwo
+  const asyncFunctionOne = next => {
+    // do something asnyc
+    next('cheese'); // calls asyncFunctionTwo
   };
 
-  function asyncFunctionTwo (next) {
-    //do something asnyc
-    next(); //calls asyncFunctionThree
+  const asyncFunctionTwo = (message, next) => {
+    // do something asnyc
+    console.log(message); // cheese
+    next('peanut butter'); // calls asyncFunctionThree
   };
 
-  function asyncFunctionThree () {
-    //done
+  const asyncFunctionThree = message => {
+    // done
+    console.log(message); // peanut butter
   };
 
-  chain([asyncFunctionOne, asyncFunctionTwo, asyncFunctionThree]);
+  chain(asyncFunctionOne, asyncFunctionTwo, asyncFunctionThree);
 
 ```
