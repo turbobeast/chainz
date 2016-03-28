@@ -1,4 +1,4 @@
-import chainz from '../index.js';
+import chainz from '../src/index.js';
 import test from 'tape';
 
 test('chainz injects next function', t => {
