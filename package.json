@@ -1,6 +1,6 @@
 {
   "name": "chainz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Helps call an array of async functions in order, by injecting a next callback ",
   "repository": {
     "type": "git",
